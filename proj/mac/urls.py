@@ -26,7 +26,6 @@ from users import views as user_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('shop/', include('shop.urls')),
-    path('blog/', include('blog.urls')),
     path('', views.index),
     path('profile/', user_views.profile, name='profile'),
     path('register/', user_views.register, name='register'),
@@ -51,8 +50,8 @@ urlpatterns = [
          auth_views.PasswordResetCompleteView.as_view(
              template_name='users/password_reset_complete.html'
          ),
-         name='password_reset_complete'),
-    path('', include('blog.urls')),
+         name='password_reset_complete')
+  
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
