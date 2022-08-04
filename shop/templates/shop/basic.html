@@ -14,10 +14,14 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <link rel="stylesheet" type="text/css" href="{% static 'shop/main.css' %}">
    <link rel="stylesheet" type="text/css" href="{% static 'shop/style.css' %}">
-    
+   
+<style>
+     {% block css %} {% endblock %}
+</style>
+
    <link rel="icon" href="{%static 'shop/logo/favicon.ico'%}">
-        <title>Lambda</title>
   
+        <title>Lambda</title>
   </head>
 
 <body style="margin:0px";class="flex-container">
@@ -29,8 +33,6 @@
       </div>
      
         
-     
-
       <nav id="navbar" class="navbar" style="margin-left:40px ;">
        
       <ul style="margin-left:40px ;">
@@ -90,6 +92,8 @@
     </div>
   </section><!-- End About Us Section -->
 
+
+
   <div style=" bottom: 0;">
   <footer id="footer" >
 
@@ -118,9 +122,7 @@
     </div>
 
     <div class="container footer-bottom clearfix" style="margin-top: 2px;">
-      
         </footer>
-
      </div>
   
 

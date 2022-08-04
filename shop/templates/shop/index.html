@@ -1,7 +1,44 @@
 {% extends 'shop/basic.html' %}
-{% load static %}
-{% block content%}
 
+{% block css %}
+.col-lg-3
+{
+display: inline-block;
+margin-left:14px;
+}
+.carousel-indicators .active {
+background-color:black;
+}
+.col-lg-3 img{
+width: 200px;
+height: 300px;
+}
+body .carousel-indicator li{
+background-color: black;
+}
+body .carousel-indicators{
+bottom: -40px;
+}
+.carousel-indicators li {
+    background-color: #000;
+}
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+background-color: black;
+}
+.carousel-control-prev,
+.carousel-control-next{
+top: auto;
+bottom: auto;
+padding-top: 202px;
+}
+body .no-padding{
+padding-left: 0,
+padding-right: 0;
+}
+{% endblock %}
+{% block content %}
+{% load static %}
 <div class="container">
     <!--Slideshow starts here -->
     {% for product, range, nSlides in allProds %}
@@ -17,7 +54,7 @@
             <div class="container carousel-inner no-padding">
                 <div class="carousel-item active">
                     {% for i in product %}
-                    <div class="col-xs-3 col-sm-3 col-md-3">
+                    <div class="col-xs-3 col-sm-1 col-lg-3">
                         <div class="card align-items-center" style="width: 18rem;">
                             <img src='/media/{{i.image}}' class="card-img-top" alt="...">
                             <div class="card-body">
@@ -49,9 +86,7 @@
     </div>
     {% endfor %}
 </div>
-      
-{%endblock%}
-
+{% endblock %}
 {% block js %}
 <script>
 // Find out the cart items from localStorage
