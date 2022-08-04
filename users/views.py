@@ -40,3 +40,5 @@ def profile(request):
     }
 
     return render(request, 'users/profile.html', context)
+def index (request):
+    return render(request, 'users/landing.html')
